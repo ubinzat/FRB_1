@@ -11,7 +11,7 @@
 
 void R_frb( double *xx, double *y, double *w, int *n, int *p, double *beta_m,
 		double *scale, double *chi_res_s, double *bbetas, int *nboot,
-		double *xx3, double *v2, int *bind, int *zz)
+		double *xx3, double *v2, int *bind)
 {
 
 void sampler_i(int n, int *x);
@@ -34,7 +34,7 @@ void disp_mat(double **, int, int);
 register int i,j;
 double  **x, **x3,  **x2, **x4, *v_aux, *v, s=0, *zz;
 int *indices;
-zz=1;
+
 
 
 x = (double **) malloc( sizeof(double *) * (*n) );
