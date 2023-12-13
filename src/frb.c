@@ -11,7 +11,7 @@
 
 void R_frb( double *xx, double *y, double *w, int *n, int *p, double *beta_m,
 		double *scale, double *chi_res_s, double *bbetas, int *nboot,
-		double *xx3, double *v2, int *bind, double *zz)
+		double *xx3, double *v2, int *bind, int *zz)
 {
 
 void sampler_i(int n, int *x);
