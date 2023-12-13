@@ -45,8 +45,8 @@
 #
 #' @export
 frb <- function(lmrob.object, nboot=1000, return.coef = FALSE, 
-                return.indices = FALSE, centered=TRUE,zz=1) {
-  zz=1
+                return.indices = FALSE, centered=TRUE,zzz=1) {
+  zz=zzz
   lmrob.Chi <- Mchi
   lmrob.Psi <- Mpsi
   co <- lmrob.object$control
