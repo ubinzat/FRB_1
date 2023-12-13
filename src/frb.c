@@ -99,6 +99,7 @@ for(i=0; i < (*nboot); i++) {
 };
 
 free(indices);
+free(zz);
 for(i=0; i < (*p); i++) {
 	free(x2[i]); free(x3[i]);
 	free(x4[i]);
