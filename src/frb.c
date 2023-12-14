@@ -14,7 +14,7 @@ void R_frb( double *xx, double *y, double *w, int *n, int *p, double *beta_m,
 		double *xx3, double *v2, int *bind, int *zz)
 {
 
-void sampler_i(int n, int *x);
+void sampler_i(int n, int *x, int zz);
 void reset_mat(double**, int, int);
 void reset_vec(double*, int);
 int inverse(double **,double **, int);
