@@ -14,7 +14,7 @@ void R_frb( double *xx, double *y, double *w, int *n, int *p, double *beta_m,
 		double *xx3, double *v2, int *bind, int *zz)
 {
 
-void sampler_i(int n, int *x, int zz);
+void sampler_i(int n, int *x, int *zz);
 void reset_mat(double**, int, int);
 void reset_vec(double*, int);
 int inverse(double **,double **, int);
@@ -56,9 +56,9 @@ for(i=0;i<(*p);i++) {
 GetRNGstate(); /* get seed from R */
 
 /* copy design matrix into x - just laziness */
-for(i=0;i<(*n);i++) 
+for(i=0;i<(*);i++) 
 	for(j=0;j<(*p);j++)
-		x[i][j]=xx[j*(*n)+i];
+		x[i][j]=xx[j*(*)+i];
 
 /* copy correction matrix into x3 - just lazy again */
 for(i=0;i<(*p);i++) 
@@ -311,7 +311,7 @@ for(j=0;j<m;j++) Rprintf("%10.8f ",a[i][j]);
 Rprintf("\n");
 }
 
-void sampler_i(int n, int *x)
+void sampler_i(int n, int *x, int *zz)
 {
 /* function to get a random sample of
  * indices (0 to n-1)
