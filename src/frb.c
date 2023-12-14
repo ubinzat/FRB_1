@@ -33,10 +33,10 @@ void disp_mat(double **, int, int);
 
 register int i,j;
 double  **x, **x3,  **x2, **x4, *v_aux, *v, s=0;
-int *indices, *zz;
+int *indices;
 
 
-zz = (int *) malloc( sizeof(int) * (*n) );
+
 x = (double **) malloc( sizeof(double *) * (*n) );
 x2 = (double **) malloc( sizeof(double *) * (*p) );
 x3 = (double **) malloc( sizeof(double *) * (*p) );
@@ -99,7 +99,6 @@ for(i=0; i < (*nboot); i++) {
 };
 
 free(indices);
-free(zz);
 for(i=0; i < (*p); i++) {
 	free(x2[i]); free(x3[i]);
 	free(x4[i]);
