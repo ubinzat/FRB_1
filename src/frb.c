@@ -36,7 +36,7 @@ double  **x, **x3,  **x2, **x4, *v_aux, *v, s=0;
 int *indices, *zz;
 
 
-
+zz = (int *) malloc( sizeof(int) * (*n) );
 x = (double **) malloc( sizeof(double *) * (*n) );
 x2 = (double **) malloc( sizeof(double *) * (*p) );
 x3 = (double **) malloc( sizeof(double *) * (*p) );
