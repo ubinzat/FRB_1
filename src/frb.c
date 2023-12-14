@@ -56,9 +56,9 @@ for(i=0;i<(*p);i++) {
 GetRNGstate(); /* get seed from R */
 
 /* copy design matrix into x - just laziness */
-for(i=0;i<(*);i++) 
+for(i=0;i<(*p);i++) 
 	for(j=0;j<(*p);j++)
-		x[i][j]=xx[j*(*)+i];
+		x[i][j]=xx[j*(*p)+i];
 
 /* copy correction matrix into x3 - just lazy again */
 for(i=0;i<(*p);i++) 
