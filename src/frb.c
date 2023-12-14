@@ -14,7 +14,7 @@ void R_frb( double *xx, double *y, double *w, int *n, int *p, double *beta_m,
 		double *xx3, double *v2, int *bind, int *zz)
 {
 
-void sampler_i(int n, int *x, int *zz);
+void sampler_i(int n, int *x);
 void reset_mat(double**, int, int);
 void reset_vec(double*, int);
 int inverse(double **,double **, int);
@@ -311,7 +311,7 @@ for(j=0;j<m;j++) Rprintf("%10.8f ",a[i][j]);
 Rprintf("\n");
 }
 
-void sampler_i(int n, int *x, int *zz)
+void sampler_i(int n, int *x)
 {
 /* function to get a random sample of
  * indices (0 to n-1)
@@ -320,7 +320,7 @@ void sampler_i(int n, int *x, int *zz)
  */
 int i;
 for(i=0;i<n;i++) 
-	x[i] = (int) ( n * unif_rand() * zz );
+	x[i] = (int) ( n * unif_rand() );
 }
 
 
